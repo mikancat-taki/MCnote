@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCNote</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>📝 MCNote</h1>
+
+    <div class="actions">
+      <button id="newNote">New Note</button>
+      <button id="saveFile">Save</button>
+      <button id="loadFile">Load</button>
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+      <button id="exportPng">Download PNG</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Left panel tools -->
+    <aside class="sidebar">
+      <h3>Tools</h3>
+      <button data-tool="pencil">✏️ Pencil</button>
+      <button data-tool="pen">🖊 Pen</button>
+      <button data-tool="eraser">🩹 Eraser</button>
+      <button data-tool="paint">🎨 Paint</button>
+
+      <label>Color <input type="color" id="colorPicker" value="#333333"></label>
+      <label>Size <input type="range" id="brushSize" min="1" max="30" value="6"></label>
+    </aside>
+
+    <!-- Drawing canvas -->
+    <section class="workspace">
+      <canvas id="drawCanvas"></canvas>
+      <div id="stickyContainer"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>MCNote — Modern Encrypted Drawing + Notes App</p>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/canvas.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
